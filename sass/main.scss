@@ -1,0 +1,47 @@
+$primary: #e6007d;
+$secondary:#ffcd41;
+$light: #fbf5e5;
+$navbar-bg: rgba(251, 245, 229, 0.8);
+$contact-bg: rgba(255, 255, 255, 0.9);
+
+// import function and variables
+@import '../node_modules/bootstrap/scss/functions';
+@import '../node_modules/bootstrap/scss/variables';
+
+$custom-theme-colors: (
+    "altsecondary": #ffcc41c7,
+);
+
+$theme-colors: map-merge($map1: $custom-theme-colors, $map2: $theme-colors);
+
+// import bootstrap
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+
+.btn {
+    transition: all 0.3s ease-in-out
+}
+
+.navbar {
+    background-color: $navbar-bg !important;
+    backdrop-filter: blur(16px);
+    border-color: $secondary;
+
+    & .nav-link.active,
+    & .nav-link:hover {
+        color: $primary;
+    }
+}
+
+#contact {
+    background-image: 
+    url('https://img.freepik.com/premium-photo/canadian-flag-front-view-vancouver-downtown-british-columbia-canada_67340-1680.jpg?w=2000');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-clip: padding-box;
+    background-attachment: fixed;
+
+    & .container-contact {
+        background-color: $contact-bg;
+    }
+}
